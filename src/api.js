@@ -9,8 +9,8 @@ In this case, it will detect if, in each request, we have an access token and th
 const isDevelopment = import.meta.env.MODE === 'development'
 const api = axios.create({
     //baseURL: import.meta.env.VITE_API_BASE_URL_LOCAL /* allows us to import anything specified inside of an environmen variable file */
-    myBaseURL: isDevelopment 
-        ?  import.meta.env.VITE_API_BASE_URL_LOCAL 
+    baseURL: isDevelopment 
+        ? import.meta.env.VITE_API_BASE_URL_LOCAL 
         : import.meta.env.VITE_API_BASE_URL_DEPLOY
 })
 
