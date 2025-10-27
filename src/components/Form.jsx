@@ -26,8 +26,12 @@ function Form({route, method}){
             } else {
                 navigate("/login")
             }
-        } catch (error) {
-            alert(error)
+        } catch (err) {
+            //alert(error)
+            console.error("request status:", err.response?.status);
+            console.error("response data:", err.response?.data);
+            alert(JSON.stringify(err.response?.data || err.message));
+
         } finally {
             setLoading(false)
         }
