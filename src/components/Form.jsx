@@ -28,8 +28,8 @@ function Form({route, method}){
             }
         } catch (err) {
             //alert(error)
-            console.error("request status:", err.response?.status);
-            console.error("response data:", err.response?.data);
+            console.err("request status:", err.response?.status);
+            console.err("response data:", err.response?.data);
             alert(JSON.stringify(err.response?.data || err.message));
 
         } finally {
